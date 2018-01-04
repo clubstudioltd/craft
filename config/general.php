@@ -18,6 +18,9 @@ return [
         // Whether "index.php" should be visible in URLs
         'omitScriptNameInUrls' => true,
 
+        // Error templates path
+        'errorTemplatePrefix' => "_errors/",
+
         // Control Panel trigger word
         'cpTrigger' => 'admin',
 
