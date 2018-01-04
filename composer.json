@@ -1,5 +1,5 @@
 {
-  "name": "craftcms/craft",
+  "name": "clubstudioltd/craft",
   "description": "Craft CMS",
   "keywords": [
     "craft",
@@ -11,12 +11,10 @@
   "homepage": "https://craftcms.com/",
   "type": "project",
   "support": {
-    "email": "support@craftcms.com",
-    "issues": "https://github.com/craftcms/cms/issues",
-    "forum": "https://craftcms.stackexchange.com/",
-    "source": "https://github.com/craftcms/cms",
-    "docs": "https://craftcms.com/docs",
-    "rss": "https://craftcms.com/changelog.rss"
+    "email": "dev@clubstudio.co.uk",
+    "issues": "https://github.com/clubstudioltd/craft/issues",
+    "source": "https://github.com/clubstudioltd/craft",
+    "docs": "https://github.com/clubstudioltd/craft"
   },
   "require": {
     "php": ">=7.0.0",
