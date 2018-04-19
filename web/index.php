@@ -7,7 +7,9 @@
 // Set path constants
 define('CRAFT_BASE_PATH', dirname(__DIR__));
 define('CRAFT_VENDOR_PATH', CRAFT_BASE_PATH.'/vendor');
-define('CRAFT_TEMPLATES_PATH', CRAFT_BASE_PATH.'/resources/views');
+define('CRAFT_TEMPLATES_PATH', CRAFT_BASE_PATH.'/resources/templates');
+define('CRAFT_TRANSLATIONS_PATH', CRAFT_BASE_PATH.'/resources/translations');
+define('CRAFT_CONTENT_MIGRATIONS_PATH', CRAFT_BASE_PATH.'/database/migrations');
 
 // Load Composer's autoloader
 require_once CRAFT_VENDOR_PATH.'/autoload.php';
