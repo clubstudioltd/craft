@@ -1,4 +1,12 @@
 /.env
 /.idea
+/.vscode
+/node_modules
+/web/hot
+/web/js
+/web/css
 /vendor
+/mix-manifest.json
 .DS_Store
+npm-debug.log
+yarn-error.log
