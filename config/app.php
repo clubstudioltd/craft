@@ -18,4 +18,21 @@ return [
         'my-module' => \modules\Module::class,
     ],
     //'bootstrap' => ['my-module'],
+    'components' => [
+        'mailer' => function () {
+            // Get the stored email settings
+            $settings = Craft::$app->systemSettings->getEmailSettings();
+
+            // Override the transport adapter class
+            $settings->transportType = craft\mailgun\MailgunAdapter::class;
+
+            // Override the transport adapter settings
+            $settings->transportSettings = [
+                'domain' => getenv('MAILGUN_DOMAIN'),
+                'apiKey' => getenv('MAILGUN_API_KEY'),
+            ];
+
+            return craft\helpers\MailerHelper::createMailer($settings);
+        },
+    ],
 ];
