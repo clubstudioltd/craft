@@ -3,14 +3,15 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Craft CMS</title>
+        <meta name="description" content="A website built on Craft CMS">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="csrf-token" content="{{ craft.app.request.csrfToken }}">
-        <link rel="home" href="{{ url() }}">
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="manifest" href="{{ url('site.webmanifest') }}">
+        <link rel="home" href="{{ url('') }}">
+        <link rel="apple-touch-icon" href="icon.png">
         {% block inlineCss %}{% endblock %}
-        <link rel="preload" href="{{ rev('/css/main.css') }}" as="style" onload="this.rel='stylesheet'">
+        <link rel="preload" href="{{ rev('/css/main.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="{{ rev('/css/main.css') }}"></noscript>
         <script>
             {{ source('_includes/loadcss') }}
@@ -22,13 +23,7 @@
         {% block body %}
         {% endblock %}
         <script>
-            loadjs(['https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'], 'jquery');
-
-            loadjs.ready(['jquery'], {
-                success: function () {
-                    loadjs(['{{ rev('/js/app.js') }}']);
-                }
-            });
+            loadjs(['{{ rev('/js/app.js') }}']);
         </script>
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=

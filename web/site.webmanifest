@@ -1,0 +1,13 @@
+{
+	"short_name": "Website",
+	"name": "Website Name",
+	"display": "standalone", 
+    "icons": [{
+        "src": "icon.png",
+        "sizes": "512x512",
+        "type": "image/png"
+    }],
+    "start_url": "/",
+    "theme_color": "#3367D6",
+    "background_color": "#3367D6"
+}
