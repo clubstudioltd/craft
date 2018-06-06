@@ -1,6 +1,6 @@
 <template>
     <div>
-        <p>An example component.</p>
+        <slot></slot>
     </div>
 </template>
 
