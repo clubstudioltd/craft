@@ -22,7 +22,7 @@ return [
         'errorTemplatePrefix' => "_errors/",
 
         // Control Panel trigger word
-        'cpTrigger' => 'admin',
+        'cpTrigger' => 'cms',
 
         // The secure key Craft will use for hashing and encrypting data
         'securityKey' => getenv('SECURITY_KEY'),
