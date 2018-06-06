@@ -1,5 +1,11 @@
 {% extends '_layouts/master' %}
 
-{% block content %}
+{% block inlineCss %}
+    <style>
+        {{ source('_includes/critical-css/index_critical.min.css', true) }}
+    </style>
+{% endblock %}
 
+{% block content %}
+    Homepage
 {% endblock %}
