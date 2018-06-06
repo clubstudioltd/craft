@@ -32,11 +32,17 @@ return [
 
         // Dev Mode (see https://craftcms.com/support/dev-mode)
         'devMode' => getenv('DEV_MODE'),
+
+        // Allow updates?
+        'allow_updates' => false,
+
+        // Default timezone
+        'timezone' => 'Europe/London',
     ],
 
     // Dev environment settings
     'dev' => [
-
+        'allow_updates' => true,
     ],
 
     // Staging environment settings
