@@ -3,7 +3,6 @@
  * Craft web bootstrap file
  */
 
-
 // Set path constants
 define('CRAFT_BASE_PATH', dirname(__DIR__));
 define('CRAFT_VENDOR_PATH', CRAFT_BASE_PATH.'/vendor');
@@ -24,8 +23,8 @@ define('CRAFT_ENVIRONMENT', getenv('ENVIRONMENT') ?: 'production');
 
 $app = require CRAFT_VENDOR_PATH.'/craftcms/cms/bootstrap/web.php';
 
-// Define any custom Yii aliases here, so that aliases such as @web and @webroot 
-// can be used within the .env file. These can be moved to config/general.php 
+// Define any custom Yii aliases here, so that aliases such as @web and @webroot
+// can be used within the .env file. These can be moved to config/general.php
 // once Craft uses Yii 2.1 (https://github.com/yiisoft/yii2/issues/10157).
 Yii::setAlias('@assetBasePath', getenv('ASSET_BASE_PATH'));
 Yii::setAlias('@assetBaseUrl', getenv('ASSET_BASE_URL'));
