@@ -6,6 +6,8 @@ files:
   ignore:
     - 'resources/assets/sass/config/**/*.s+(a|c)ss'
     - 'resources/assets/sass/vendor/**/*.s+(a|c)ss'
+    - 'vendor/**'
+    - 'web/**'
 
 rules:
   attribute-quotes:
@@ -88,7 +90,7 @@ rules:
   indentation:
     - 1
     -
-      size: 2
+      size: 4
 
   leading-zero:
     - 1
