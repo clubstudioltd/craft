@@ -5,33 +5,24 @@
 // ==========================================================================
 
 // --------------------------------------------------------------------------
-// Normalise
+// Tailwind Bootstrapping
 // -------------------------------------------------------------------------
 
-@import '../../../node_modules/normalize.css/normalize';
+@tailwind preflight;
+@tailwind components;
 
 // --------------------------------------------------------------------------
-// Configuration
+// Helpers
 // --------------------------------------------------------------------------
 
-@import 'config/color';
-@import 'config/typography';
-
-// --------------------------------------------------------------------------
-// Utilities
-// --------------------------------------------------------------------------
-
-@import 'utilities/mixins';
-@import 'utilities/functions';
-@import 'utilities/utilities';
+@import 'extra/mixins';
+@import 'extra/functions';
 
 // --------------------------------------------------------------------------
 // Base
 // --------------------------------------------------------------------------
 
 @import 'base/base';
-@import 'base/buttons';
-@import 'base/forms';
 @import 'base/lists';
 @import 'base/tables';
 @import 'base/typography';
@@ -43,17 +34,15 @@
 @import 'layout/grid';
 
 // --------------------------------------------------------------------------
-// Partials
-// --------------------------------------------------------------------------
-
-@import 'partials/header';
-@import 'partials/footer';
-@import 'partials/navigation';
-
-// --------------------------------------------------------------------------
 // Components
 // --------------------------------------------------------------------------
 
+@import 'components/header';
+@import 'components/footer';
+@import 'components/navigation';
+
+@import 'components/buttons';
+@import 'components/forms';
 @import 'components/modal';
 @import 'components/pagination';
 
@@ -68,3 +57,10 @@
 // --------------------------------------------------------------------------
 
 @import 'extra/shame';
+@import 'extra/utilities';
+
+// --------------------------------------------------------------------------
+// Tailwind Utilities
+// --------------------------------------------------------------------------
+
+@tailwind utilities;
