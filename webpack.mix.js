@@ -1,7 +1,15 @@
-let mix = require('laravel-mix');
-let tailwindcss = require('tailwindcss');
+let mix = require('laravel-mix'),
+    tailwindcss = require('tailwindcss'),
+    glob = require('glob-all'),
+    purgecss = require('purgecss-webpack-plugin');
 
 require('laravel-mix-criticalcss');
+
+class TailwindExtractor {
+  static extract(content) {
+    return content.match(/[A-Za-z0-9-_:\/]+/g) || [];
+  }
+}
 
 mix.setPublicPath('web/')
    .js('resources/assets/js/app.js', 'web/js')
@@ -24,3 +32,29 @@ mix.setPublicPath('web/')
             minify: true,
         },
     });
+
+// Only run PurgeCSS during production builds for faster development builds
+// and so you still have the full set of utilities available during
+// development.
+if (mix.inProduction()) {
+  mix.webpackConfig({
+    plugins: [
+      new purgecss({
+        // Specify the locations of any files you want to scan for class names.
+        paths: glob.sync([
+          path.join(__dirname, 'resources/templates/**/*.twig'),
+          path.join(__dirname, 'resources/assets/js/**/*.vue')
+        ]),
+        extractors: [
+          {
+            extractor: TailwindExtractor,
+
+            // Specify the file extensions to include when scanning for
+            // class names.
+            extensions: ['html', 'twig', 'js', 'php', 'vue']
+          }
+        ]
+      })
+    ]
+  });
+}
