@@ -1,9 +1,7 @@
 {% extends '_layouts/master' %}
 
-{% block inlineCss %}
-    <style>
-        {{ source('_includes/critical-css/index_critical.min.css', true) }}
-    </style>
+{% block criticalCss %}
+    {{ source('_includes/critical-css/index_critical.min.css', true) }}
 {% endblock %}
 
 {% block content %}

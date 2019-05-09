@@ -1,3 +1,5 @@
+{% set useCriticalCss = (block('criticalCss')|length and not craft.config.devMode) ? true : false %}
+
 <!doctype html>
 <html lang="en">
     <head>
@@ -8,8 +10,12 @@
         <link rel="manifest" href="{{ url('site.webmanifest') }}">
         <link rel="home" href="{{ url('') }}">
         <link rel="apple-touch-icon" href="{{ url('icon.png') }}">
-        {% block inlineCss %}{% endblock %}
-        <link rel="preload" href="{{ rev('/css/main.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        {% if useCriticalCss %}
+            <style>
+                {% block criticalCss %}{% endblock %}
+            </style>
+        {% endif %}
+        <link rel="{{ useCriticalCss ? 'preload' : 'stylesheet' }}" href="{{ rev('/css/main.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="{{ rev('/css/main.css') }}"></noscript>
         <script>
             {{ source('_includes/loadcss') }}
