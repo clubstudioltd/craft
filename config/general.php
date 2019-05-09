@@ -9,6 +9,9 @@
 return [
     // Global settings
     '*' => [
+        // Allow updates?
+        'allow_updates' => false,
+
         // Default Week Start Day (0 = Sunday, 1 = Monday...)
         'defaultWeekStartDay' => 0,
 
@@ -30,28 +33,32 @@ return [
         // Base site URL
         'siteUrl' => getenv('SITE_URL'),
 
-        // Dev Mode (see https://craftcms.com/support/dev-mode)
-        'devMode' => getenv('DEV_MODE') === 'false' ? false : true,
-
-        // Allow updates?
-        'allow_updates' => false,
-
         // Default timezone
         'timezone' => 'Europe/London',
+
+        // Whether to save the project config out to config/project.yaml
+        // (see https://docs.craftcms.com/v3/project-config.html)
+        'useProjectConfigFile' => false,
     ],
 
     // Dev environment settings
     'dev' => [
+        // Allow updates?
         'allow_updates' => true,
+
+        // Dev Mode (see https://craftcms.com/guides/what-dev-mode-does)
+        'dev_mode' => true,
     ],
 
     // Staging environment settings
     'staging' => [
-
+        // Set this to `false` to prevent administrative changes from being made on staging
+        'allowAdminChanges' => true,
     ],
 
     // Production environment settings
     'production' => [
-
+        // Set this to `false` to prevent administrative changes from being made on production
+        'allowAdminChanges' => true,
     ],
 ];
