@@ -10,7 +10,7 @@ return [
     // Global settings
     '*' => [
         // Allow updates?
-        'allow_updates' => false,
+        'allowUpdates' => false,
 
         // Default Week Start Day (0 = Sunday, 1 = Monday...)
         'defaultWeekStartDay' => 0,
@@ -44,10 +44,10 @@ return [
     // Dev environment settings
     'dev' => [
         // Allow updates?
-        'allow_updates' => true,
+        'allowUpdates' => true,
 
         // Dev Mode (see https://craftcms.com/guides/what-dev-mode-does)
-        'dev_mode' => true,
+        'devMode' => true,
     ],
 
     // Staging environment settings
