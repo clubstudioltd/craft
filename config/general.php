@@ -31,7 +31,7 @@ return [
         'siteUrl' => getenv('SITE_URL'),
 
         // Dev Mode (see https://craftcms.com/support/dev-mode)
-        'devMode' => getenv('DEV_MODE'),
+        'devMode' => getenv('DEV_MODE') === 'false' ? false : true,
 
         // Allow updates?
         'allow_updates' => false,
