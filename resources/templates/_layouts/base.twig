@@ -1,4 +1,4 @@
-{% set useCriticalCss = (block('criticalCss')|length and not craft.config.devMode) ? true : false %}
+{% set useCriticalCss = (block('criticalCss')|length and not craft.app.config.general.devMode) ? true : false %}
 
 <!doctype html>
 <html lang="en">
