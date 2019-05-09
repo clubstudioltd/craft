@@ -1,33 +1,39 @@
-{% set useCriticalCss = (block('criticalCss')|length and not craft.app.config.general.devMode) ? true : false %}
+{%- set useCriticalCss = (block('criticalCss')|length and not craft.app.config.general.devMode) ? true : false -%}
 
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="csrf-token" content="{{ craft.app.request.csrfToken }}">
-        <link rel="manifest" href="{{ url('site.webmanifest') }}">
-        <link rel="home" href="{{ url('') }}">
-        <link rel="apple-touch-icon" href="{{ url('icon.png') }}">
-        {% if useCriticalCss %}
-            <style>
-                {% block criticalCss %}{% endblock %}
-            </style>
-        {% endif %}
-        <link rel="{{ useCriticalCss ? 'preload' : 'stylesheet' }}" href="{{ rev('/css/main.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="{{ rev('/css/main.css') }}"></noscript>
-        <script>
-            {{ source('_includes/loadcss') }}
-            {{ source('_includes/loadjs') }}
-        </script>
-    </head>
-    <body class="body bg-grey-lighter">
-        <noscript>This website works best when you have JavaScript enabled.</noscript>
-        {% block body %}
-        {% endblock %}
-        <script>
-            loadjs(['{{ rev('/js/app.js') }}']);
-        </script>
-    </body>
-</html>
+{%- minify -%}
+    <!doctype html>
+    <html lang="en">
+        <head>
+            <meta charset="utf-8">
+            <meta http-equiv="x-ua-compatible" content="ie=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+            <meta name="csrf-token" content="{{ craft.app.request.csrfToken }}">
+            <link rel="manifest" href="{{ url('site.webmanifest') }}">
+            <link rel="home" href="{{ url('') }}">
+            <link rel="apple-touch-icon" href="{{ url('icon.png') }}">
+            {% if useCriticalCss %}
+                <style>
+                    {% block criticalCss %}{% endblock %}
+                </style>
+            {% endif %}
+            <link rel="{{ useCriticalCss ? 'preload' : 'stylesheet' }}" href="{{ rev('/css/main.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+            <noscript><link rel="stylesheet" href="{{ rev('/css/main.css') }}"></noscript>
+            <script>
+                {{ source('_includes/loadcss') }}
+                {{ source('_includes/loadjs') }}
+            </script>
+        </head>
+        <body class="body bg-grey-lighter">
+            <noscript>This website works best when you have JavaScript enabled.</noscript>
+{%- endminify -%}
+
+{% block body %}
+{% endblock %}
+
+{%- minify -%}
+            <script>
+                loadjs(['{{ rev('/js/app.js') }}']);
+            </script>
+        </body>
+    </html>
+{%- endminify -%}
