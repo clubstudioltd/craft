@@ -17,7 +17,7 @@ mix.setPublicPath('web/')
    .copy('resources/assets/img', 'web/img')
    .options({
         processCssUrls: false,
-        postCss: [ tailwindcss('./tailwind.js') ],
+        postCss: [ tailwindcss('./tailwind.config.js') ],
    })
    .version()
    .criticalCss({
