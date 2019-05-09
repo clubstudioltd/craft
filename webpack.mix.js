@@ -1,14 +1,14 @@
-let mix = require('laravel-mix'),
-    tailwindcss = require('tailwindcss'),
-    glob = require('glob-all'),
-    purgecss = require('purgecss-webpack-plugin');
+let glob = require('glob-all'),
+    mix = require('laravel-mix'),
+    purgecss = require('purgecss-webpack-plugin'),
+    tailwindcss = require('tailwindcss');
 
 require('laravel-mix-criticalcss');
 
 class TailwindExtractor {
-  static extract(content) {
-    return content.match(/[A-Za-z0-9-_:\/]+/g) || [];
-  }
+    static extract(content) {
+        return content.match(/[A-Za-z0-9-_:\/]+/g) || [];
+    }
 }
 
 mix.setPublicPath('web/')
@@ -16,8 +16,8 @@ mix.setPublicPath('web/')
    .sass('resources/assets/sass/main.scss', 'web/css')
    .copy('resources/assets/img', 'web/img')
    .options({
-      processCssUrls: false,
-      postCss: [ tailwindcss('./tailwind.js') ],
+        processCssUrls: false,
+        postCss: [ tailwindcss('./tailwind.js') ],
    })
    .version()
    .criticalCss({
@@ -38,24 +38,24 @@ mix.setPublicPath('web/')
 // and so you still have the full set of utilities available during
 // development.
 if (mix.inProduction()) {
-  mix.webpackConfig({
-    plugins: [
-      new purgecss({
-        // Specify the locations of any files you want to scan for class names.
-        paths: glob.sync([
-          path.join(__dirname, 'resources/templates/**/*.twig'),
-          path.join(__dirname, 'resources/assets/js/**/*.vue')
-        ]),
-        extractors: [
-          {
-            extractor: TailwindExtractor,
+    mix.webpackConfig({
+        plugins: [
+            new purgecss({
+                // Specify the locations of any files you want to scan for class names.
+                paths: glob.sync([
+                    path.join(__dirname, 'resources/templates/**/*.twig'),
+                    path.join(__dirname, 'resources/assets/js/**/*.vue')
+                ]),
+                extractors: [
+                    {
+                        extractor: TailwindExtractor,
 
-            // Specify the file extensions to include when scanning for
-            // class names.
-            extensions: ['html', 'twig', 'js', 'php', 'vue']
-          }
+                        // Specify the file extensions to include when scanning
+                        // for class names.
+                        extensions: ['html', 'twig', 'js', 'php', 'vue']
+                    }
+                ]
+            })
         ]
-      })
-    ]
-  });
+    });
 }
