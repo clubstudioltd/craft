@@ -14,6 +14,7 @@ class TailwindExtractor {
 mix.setPublicPath('web/')
    .js('resources/assets/js/app.js', 'web/js')
    .sass('resources/assets/sass/main.scss', 'web/css')
+   .copy('resources/assets/img', 'web/img')
    .options({
       processCssUrls: false,
       postCss: [ tailwindcss('./tailwind.js') ],

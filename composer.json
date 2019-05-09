@@ -25,7 +25,8 @@
     "craftcms/mailgun": "1.2.0",
     "lukeyouell/craft-sentry": "1.4.0",
     "verbb/expanded-singles": "1.0.4",
-    "nystudio107/craft-seomatic": "^3.1"
+    "nystudio107/craft-seomatic": "^3.1",
+    "clubstudioltd/craft-inline-svg": "^0.1.1"
   },
   "autoload": {
     "psr-4": {
