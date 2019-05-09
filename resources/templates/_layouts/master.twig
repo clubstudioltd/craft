@@ -5,10 +5,9 @@
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        {% include '_includes/partials/header' %}
-        {% include '_includes/partials/navigation' %}
-        {% block content %}
-        {% endblock %}
-        {% include '_includes/partials/footer' %}
+        {% include '_includes/organisms/header' %}
+        {% include '_includes/organisms/navigation' %}
+        {% block content '' %}
+        {% include '_includes/organisms/footer' %}
     </div>
 {% endblock %}
