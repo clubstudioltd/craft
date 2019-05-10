@@ -24,3 +24,10 @@ Vue.component('example-component', require('./components/ExampleComponent.vue'))
 const app = new Vue({
     el: '#app'
 });
+
+/* --------------------------------------------------------------------------
+ * Include modules
+ * -------------------------------------------------------------------------- */
+
+import { cookieConsent } from './modules/cookieconsent';
+cookieConsent.init();
