@@ -1,4 +1,31 @@
-<p align="center"><a href="https://craftcms.com/" target="_blank"><img width="312" height="90" src="https://craftcms.com/craftcms.svg" alt="Craft CMS"></a></p>
+<img src="./resources/assets/img/svg/logo.svg" width="64">
+
+# Craft 3 Boilerplate
+
+A scaffolding package to help you hit the ground running with your next [Craft CMS](https://craftcms.com) project. 
+
+## What's included?
+
+* [Craft CMS 3](https://craftcms.com)
+* [Tailwind CSS](https://tailwindcss.com)
+* [Laravel Mix](https://laravel-mix.com/)
+* A sensible directory structure
+* Commonly used Craft CMS plugins:
+  * [Asset Rev](https://github.com/clubstudioltd/craft-asset-rev)
+  * [Expanded Singles](https://github.com/verbb/expanded-singles)
+  * [Imager](https://github.com/aelvan/Imager-Craft)
+  * [Inline SVG](https://github.com/clubstudioltd/craft-inline-svg)
+  * [Mailgun](https://github.com/craftcms/mailgun)
+  * [Minify](https://github.com/nystudio107/craft-minify)
+  * [Redactor](https://github.com/craftcms/redactor)
+  * [Sentry](https://github.com/lukeyouell/craft-sentry)
+  * [SEOmatic](https://github.com/nystudio107/craft-seomatic)
+
+## Getting Started
+
+```
+composer create-project clubstudioltd/craft
+```
 
 ## About Craft CMS
 
