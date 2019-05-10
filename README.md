@@ -8,7 +8,8 @@ A scaffolding package to help you hit the ground running with your next [Craft C
 
 * [Craft CMS 3](https://craftcms.com)
 * [Tailwind CSS](https://tailwindcss.com)
-* [Laravel Mix](https://laravel-mix.com/)
+* [Laravel Mix](https://laravel-mix.com)
+* [Vue.js](https://vuejs.org)
 * A sensible directory structure
 * Commonly used Craft CMS plugins:
   * [Asset Rev](https://github.com/clubstudioltd/craft-asset-rev)
@@ -23,9 +24,31 @@ A scaffolding package to help you hit the ground running with your next [Craft C
 
 ## Getting Started
 
+Once you're happy that your server/machine meets Craft's [requirements](https://docs.craftcms.com/v3/requirements.html), you can start your new project by running the following command in your terminal:
+
 ```
 composer create-project clubstudioltd/craft
 ```
+
+This will clone a copy of this repo to your machine and automatically install any Composer dependencies.
+
+Next, head over to the Craft [installation documentation](https://docs.craftcms.com/v3/installation.html) and continue from [Step 2](https://docs.craftcms.com/v3/installation.html#step-2-set-the-file-permissions).
+
+## Developing
+
+After setting up Craft you're ready to start building your new project! Before getting started you'll want to pull in all frontend dependencies by running:
+
+```
+npm install
+```
+
+Once the dependencies have been installed, you can compile assets and start a watcher using:
+
+```
+npm run watch
+```
+
+That's it! Happy coding! 🎉
 
 ## About Craft CMS
 
@@ -33,22 +56,11 @@ Craft is a content-first CMS that aims to make life enjoyable for developers and
 
 Learn more about Craft at [craftcms.com](https://craftcms.com).
 
-## How to Install Craft 3
-
-See the Craft 3 documentation for [installation](https://github.com/craftcms/docs/blob/master/en/installation.md) and [updating](https://github.com/craftcms/docs/blob/master/en/upgrade.md) instructions.
-
 ## Resources
-
-#### Official Resources
-- [Craft 3 Documentation](https://github.com/craftcms/docs)
-- [Craft 3 Class Reference](https://docs.craftcms.com/api/v3/)
-- [Craft 3 Plugins](https://plugins.craftcms.com)
-- [Demo site](https://demo.craftcms.com/)
-- [Craft Slack](https://craftcms.com/community#slack)
-- [Craft CMS Stack Exchange](http://craftcms.stackexchange.com/)
-
-#### Community Resources
-- [Mijingo](https://mijingo.com/craft) – Video courses and other learning resources
-- [Envato Tuts+](https://webdesign.tutsplus.com/categories/craft-cms/courses) – Video courses
-- [Straight Up Craft](http://straightupcraft.com/) – Articles, tutorials, and more
-- [pluginfactory.io](https://pluginfactory.io/) – Craft plugin scaffold generator
+- **[Documentation](http://docs.craftcms.com/v3/)** – Read the official docs.
+- **[Guides](https://craftcms.com/guides)** – Follow along with the official guides.
+- **[#craftcms](https://twitter.com/hashtag/craftcms)** – See the latest tweets about Craft.
+- **[Discord](https://craftcms.com/discord)** – Meet the community.
+- **[Stack Exchange](http://craftcms.stackexchange.com/)** – Get help and help others.
+- **[CraftQuest](https://craftquest.io/)** – Watch unlimited video lessons and courses.
+- **[Craft Link List](http://craftlinklist.com/)** – Stay in-the-know.
