@@ -27,7 +27,7 @@ A scaffolding package to help you hit the ground running with your next [Craft C
 Once you're happy that your server/machine meets Craft's [requirements](https://docs.craftcms.com/v3/requirements.html), you can start your new project by running the following command in your terminal:
 
 ```
-composer create-project clubstudioltd/craft
+composer create-project clubstudioltd/craft PATH 
 ```
 
 This will clone a copy of this repo to your machine and automatically install any Composer dependencies.
