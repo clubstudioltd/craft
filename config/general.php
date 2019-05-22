@@ -39,6 +39,10 @@ return [
         // Whether to save the project config out to config/project.yaml
         // (see https://docs.craftcms.com/v3/project-config.html)
         'useProjectConfigFile' => false,
+        
+        // Whether an `X-Powered-By: Craft CMS` header should be sent, helping
+        // services like BuiltWith identify that the site is running on Craft.
+        'sendPoweredByHeader' => false,
     ],
 
     // Dev environment settings
