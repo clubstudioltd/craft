@@ -1,26 +1,28 @@
-let glob = require('glob-all'),
-    mix = require('laravel-mix'),
-    purgecss = require('purgecss-webpack-plugin'),
+let mix = require('laravel-mix'),
     tailwindcss = require('tailwindcss');
 
 require('laravel-mix-criticalcss');
-
-class TailwindExtractor {
-    static extract(content) {
-        return content.match(/[A-Za-z0-9-_:\/]+/g) || [];
-    }
-}
+require('laravel-mix-purgecss');
 
 mix.setPublicPath('web/')
-   .js('resources/assets/js/app.js', 'web/js')
-   .sass('resources/assets/sass/main.scss', 'web/css')
-   .copy('resources/assets/img', 'web/img')
-   .options({
+    .js('resources/assets/js/app.js', 'web/js')
+    .sass('resources/assets/sass/main.scss', 'web/css')
+    .copy('resources/assets/img', 'web/img')
+    .options({
         processCssUrls: false,
         postCss: [ tailwindcss('./tailwind.config.js') ],
-   })
-   .version()
-   .criticalCss({
+    })
+    .version()
+    .purgeCss({
+        globs: [
+            path.join(__dirname, 'resources/templates/**/*.twig'),
+            path.join(__dirname, 'resources/assets/js/**/*.vue')
+        ],
+        extensions: ['html', 'twig', 'js', 'php', 'vue'],
+        whitelistPatterns: [/cc-/],
+        whitelistPatternsChildren: [],
+    })
+    .criticalCss({
         enabled: mix.inProduction(),
         paths: {
             base: process.env.SITE_URL,
@@ -33,29 +35,3 @@ mix.setPublicPath('web/')
             minify: true,
         },
     });
-
-// Only run PurgeCSS during production builds for faster development builds
-// and so you still have the full set of utilities available during
-// development.
-if (mix.inProduction()) {
-    mix.webpackConfig({
-        plugins: [
-            new purgecss({
-                // Specify the locations of any files you want to scan for class names.
-                paths: glob.sync([
-                    path.join(__dirname, 'resources/templates/**/*.twig'),
-                    path.join(__dirname, 'resources/assets/js/**/*.vue')
-                ]),
-                extractors: [
-                    {
-                        extractor: TailwindExtractor,
-
-                        // Specify the file extensions to include when scanning
-                        // for class names.
-                        extensions: ['html', 'twig', 'js', 'php', 'vue']
-                    }
-                ]
-            })
-        ]
-    });
-}
