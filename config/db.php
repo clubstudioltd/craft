@@ -6,7 +6,10 @@
  * list of the available settings in vendor/craftcms/cms/src/config/DbConfig.php.
  */
 
+use craft\helpers\App;
+
 return [
+    'dsn' => App::env('DB_DSN') ?: null,
     'driver' => getenv('DB_DRIVER'),
     'server' => getenv('DB_SERVER'),
     'user' => getenv('DB_USER'),
