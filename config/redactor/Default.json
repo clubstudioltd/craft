@@ -1,5 +1,6 @@
 {
     "buttons": [
+        "html",
         "formatting",
         "bold",
         "italic",
@@ -13,5 +14,7 @@
         "fullscreen",
         "video"
     ],
+    "linkNewTab": true,
     "toolbarFixed": true
 }
+  
