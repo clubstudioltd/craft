@@ -14,20 +14,19 @@
     },
     "devDependencies": {
         "axios": "^0.19",
-        "cross-env": "^5.2.1",
+        "cross-env": "^7.0.2",
         "eslint": "^4.19.1",
-        "eslint-plugin-vue": "^4.5.0",
-        "jquery": "^3.4.1",
-        "laravel-mix": "^5.0.0",
+        "eslint-plugin-vue": "^4.7.1",
+        "laravel-mix": "^5.0.7",
         "laravel-mix-criticalcss": "^1.0.1",
         "laravel-mix-purgecss": "^4.2.0",
-        "lodash": "^4.17.15",
         "resolve-url-loader": "^2.3.2",
-        "sass": "^1.15.2",
-        "sass-lint-auto-fix": "^0.11.0",
-        "sass-loader": "^7.1.0",
-        "tailwindcss": "^1.1.2",
-        "vue": "^2.6.10"
+        "sass": "^1.27.0",
+        "sass-lint-auto-fix": "^0.21.2",
+        "sass-loader": "^7.3.1",
+        "tailwindcss": "^1.9.4",
+        "vue": "^2.6.12",
+        "vue-template-compiler": "^2.6.12"
     },
     "dependencies": {
         "cookieconsent": "^3.1.1"
