@@ -24,7 +24,7 @@ return [
         // Error templates path
         'errorTemplatePrefix' => "_errors/",
 
-        // Control Panel trigger word
+        // Control panel trigger word
         'cpTrigger' => 'cms',
 
         // The secure key Craft will use for hashing and encrypting data
