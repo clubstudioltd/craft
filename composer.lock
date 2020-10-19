@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "76a4539c3db75ba26203b81b6678fb96",
+    "content-hash": "277edd2032186169d1cf05b7b93c50b3",
     "packages": [
         {
             "name": "aelvan/imager",
-            "version": "v2.3.0",
+            "version": "v2.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aelvan/Imager-Craft.git",
-                "reference": "b9f01d7bfb6e05a6688c676d7bbfcc50a68f5d29"
+                "reference": "c3d8c8944dcc5492c727bdd96b52a5806312c9b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aelvan/Imager-Craft/zipball/b9f01d7bfb6e05a6688c676d7bbfcc50a68f5d29",
-                "reference": "b9f01d7bfb6e05a6688c676d7bbfcc50a68f5d29",
+                "url": "https://api.github.com/repos/aelvan/Imager-Craft/zipball/c3d8c8944dcc5492c727bdd96b52a5806312c9b9",
+                "reference": "c3d8c8944dcc5492c727bdd96b52a5806312c9b9",
                 "shasum": ""
             },
             "require": {
@@ -71,7 +71,7 @@
                 "transform"
             ],
             "abandoned": "spacecatninja/imager-x",
-            "time": "2019-09-21T14:25:19+00:00"
+            "time": "2020-02-11T19:28:27+00:00"
         },
         {
             "name": "aws/aws-sdk-php",
@@ -845,29 +845,28 @@
         },
         {
             "name": "craftcms/mailgun",
-            "version": "1.4.2",
+            "version": "1.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/mailgun.git",
-                "reference": "e97a0bb1cfb2790f41394e064914cab1457344dd"
+                "reference": "eb1ad291d6b5a2b2d24442048568e396f780e00b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/mailgun/zipball/e97a0bb1cfb2790f41394e064914cab1457344dd",
-                "reference": "e97a0bb1cfb2790f41394e064914cab1457344dd",
+                "url": "https://api.github.com/repos/craftcms/mailgun/zipball/eb1ad291d6b5a2b2d24442048568e396f780e00b",
+                "reference": "eb1ad291d6b5a2b2d24442048568e396f780e00b",
                 "shasum": ""
             },
             "require": {
                 "craftcms/cms": "^3.1.5",
                 "cspoo/swiftmailer-mailgun-bundle": "^1.0.0",
-                "php-http/guzzle6-adapter": "^1.1.1"
+                "php-http/guzzle6-adapter": "^1.1.1 || ^2.0"
             },
             "type": "craft-plugin",
             "extra": {
                 "name": "Mailgun",
                 "handle": "mailgun",
-                "changelogUrl": "https://raw.githubusercontent.com/craftcms/mailgun/master/CHANGELOG.md",
-                "downloadUrl": "https://github.com/craftcms/mailgun/archive/master.zip"
+                "documentationUrl": "https://github.com/craftcms/mailgun/blob/v1/README.md"
             },
             "autoload": {
                 "psr-4": {
@@ -892,7 +891,7 @@
                 "mailgun",
                 "yii2"
             ],
-            "time": "2019-02-22T13:14:31+00:00"
+            "time": "2020-05-05T06:56:32+00:00"
         },
         {
             "name": "craftcms/oauth2-craftid",
@@ -991,20 +990,20 @@
         },
         {
             "name": "craftcms/redactor",
-            "version": "2.4.0",
+            "version": "2.8.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/redactor.git",
-                "reference": "8fd0daca685309ad8635f28dca8c9ab2b3f228d4"
+                "reference": "d9758847fcdd5b26ed238cfdee3eab707edb0faa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/redactor/zipball/8fd0daca685309ad8635f28dca8c9ab2b3f228d4",
-                "reference": "8fd0daca685309ad8635f28dca8c9ab2b3f228d4",
+                "url": "https://api.github.com/repos/craftcms/redactor/zipball/d9758847fcdd5b26ed238cfdee3eab707edb0faa",
+                "reference": "d9758847fcdd5b26ed238cfdee3eab707edb0faa",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "^3.2.0"
+                "craftcms/cms": "^3.5.0"
             },
             "type": "craft-plugin",
             "extra": {
@@ -1035,7 +1034,7 @@
                 "html",
                 "yii2"
             ],
-            "time": "2019-09-13T11:02:32+00:00"
+            "time": "2020-10-14T08:21:11+00:00"
         },
         {
             "name": "craftcms/server-check",
@@ -3538,21 +3537,21 @@
         },
         {
             "name": "nystudio107/craft-minify",
-            "version": "1.2.9",
+            "version": "1.2.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-minify.git",
-                "reference": "3bb2a6f160658bcfeeab9fa390cf28fba38fbd26"
+                "reference": "01d5de3f016c9c4a1e62c17e9f3ed981099c3927"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-minify/zipball/3bb2a6f160658bcfeeab9fa390cf28fba38fbd26",
-                "reference": "3bb2a6f160658bcfeeab9fa390cf28fba38fbd26",
+                "url": "https://api.github.com/repos/nystudio107/craft-minify/zipball/01d5de3f016c9c4a1e62c17e9f3ed981099c3927",
+                "reference": "01d5de3f016c9c4a1e62c17e9f3ed981099c3927",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "^3.0.0-RC1",
-                "mrclay/minify": "^3.0.0"
+                "craftcms/cms": "^3.0.0",
+                "mrclay/minify": "^3.0.10"
             },
             "type": "craft-plugin",
             "extra": {
@@ -3590,7 +3589,7 @@
                 "craftcms",
                 "minify"
             ],
-            "time": "2018-07-21T15:09:55+00:00"
+            "time": "2020-04-02T21:20:01+00:00"
         },
         {
             "name": "nystudio107/craft-seomatic",
@@ -6991,30 +6990,64 @@
             "time": "2020-02-11T15:31:23+00:00"
         },
         {
-            "name": "verbb/expanded-singles",
-            "version": "1.0.7",
+            "name": "verbb/base",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/verbb/expanded-singles.git",
-                "reference": "f15ffb048da60ba6219f8ca5f0a03d727320c4c0"
+                "url": "https://github.com/verbb/verbb-base.git",
+                "reference": "85a11791c811c90ea58a3718488af0e60e12ba2c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/verbb/expanded-singles/zipball/f15ffb048da60ba6219f8ca5f0a03d727320c4c0",
-                "reference": "f15ffb048da60ba6219f8ca5f0a03d727320c4c0",
+                "url": "https://api.github.com/repos/verbb/verbb-base/zipball/85a11791c811c90ea58a3718488af0e60e12ba2c",
+                "reference": "85a11791c811c90ea58a3718488af0e60e12ba2c",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "^3.1.0"
+                "craftcms/cms": "^3.0.0"
+            },
+            "type": "yii-module",
+            "autoload": {
+                "psr-4": {
+                    "verbb\\base\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Verbb",
+                    "homepage": "https://verbb.io"
+                }
+            ],
+            "description": "Common utilities and building-blocks for Verbb plugins for Craft CMS.",
+            "time": "2020-04-14T23:40:29+00:00"
+        },
+        {
+            "name": "verbb/expanded-singles",
+            "version": "1.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/verbb/expanded-singles.git",
+                "reference": "c15647cff1f74129517f73b4f1c2259626619dd2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/verbb/expanded-singles/zipball/c15647cff1f74129517f73b4f1c2259626619dd2",
+                "reference": "c15647cff1f74129517f73b4f1c2259626619dd2",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.4.0",
+                "verbb/base": "^1.0.2"
             },
             "type": "craft-plugin",
             "extra": {
                 "name": "Expanded Singles",
                 "handle": "expanded-singles",
                 "description": "Alters the Entries Index sidebar to list all Singles, rather than grouping them under a 'Singles' link.",
-                "schemaVersion": "1.0.0",
-                "hasCpSettings": true,
-                "hasCpSection": false,
                 "documentationUrl": "https://github.com/verbb/expanded-singles",
                 "changelogUrl": "https://raw.githubusercontent.com/verbb/expanded-singles/craft-3/CHANGELOG.md",
                 "class": "verbb\\expandedsingles\\ExpandedSingles"
@@ -7042,7 +7075,7 @@
                 "craftcms",
                 "expanded singles"
             ],
-            "time": "2019-02-09T12:53:15+00:00"
+            "time": "2020-07-27T09:39:40+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
