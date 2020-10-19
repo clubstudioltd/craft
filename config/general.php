@@ -6,6 +6,8 @@
  * list of the available settings in vendor/craftcms/cms/src/config/GeneralConfig.php.
  */
 
+use craft\helpers\App;
+
 return [
     // Global settings
     '*' => [
@@ -28,10 +30,10 @@ return [
         'cpTrigger' => 'cms',
 
         // The secure key Craft will use for hashing and encrypting data
-        'securityKey' => getenv('SECURITY_KEY'),
+        'securityKey' => App::env('SECURITY_KEY'),
 
         // Base site URL
-        'siteUrl' => getenv('SITE_URL'),
+        'siteUrl' => App::env('SITE_URL'),
 
         // Default timezone
         'timezone' => 'Europe/London',
