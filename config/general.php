@@ -62,7 +62,7 @@ return [
     // Staging environment settings
     'staging' => [
         // Set this to `false` to prevent administrative changes from being made on staging
-        'allowAdminChanges' => true,
+        'allowAdminChanges' => false,
 
         // Prevent crawlers from indexing pages and following links
         'disallowRobots' => true,        
@@ -71,6 +71,6 @@ return [
     // Production environment settings
     'production' => [
         // Set this to `false` to prevent administrative changes from being made on production
-        'allowAdminChanges' => true,
+        'allowAdminChanges' => false,
     ],
 ];
