@@ -9,14 +9,11 @@ A scaffolding package to help you hit the ground running with your next [Craft C
 * [Craft CMS 3](https://craftcms.com)
 * [Tailwind CSS](https://tailwindcss.com)
 * [Laravel Mix](https://laravel-mix.com)
-* [Vue.js](https://vuejs.org)
 * A sensible directory structure
 * Commonly used Craft CMS plugins:
   * [Asset Rev](https://github.com/clubstudioltd/craft-asset-rev)
-  * [Expanded Singles](https://github.com/verbb/expanded-singles)
   * [Imager](https://github.com/aelvan/Imager-Craft)
   * [Inline SVG](https://github.com/clubstudioltd/craft-inline-svg)
-  * [Mailgun](https://github.com/craftcms/mailgun)
   * [Minify](https://github.com/nystudio107/craft-minify)
   * [Redactor](https://github.com/craftcms/redactor)
   * [Sentry](https://github.com/lukeyouell/craft-sentry)
