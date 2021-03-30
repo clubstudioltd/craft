@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'Entries' => 'Content',
+    
 ];

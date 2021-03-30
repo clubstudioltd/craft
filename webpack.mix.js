@@ -2,26 +2,16 @@ let mix = require('laravel-mix'),
     tailwindcss = require('tailwindcss');
 
 require('laravel-mix-criticalcss');
-require('laravel-mix-purgecss');
 
 mix.setPublicPath('web/')
-    .js('resources/assets/js/app.js', 'web/js')
-    .sass('resources/assets/sass/main.scss', 'web/css')
-    .copy('resources/assets/img', 'web/img')
+    .js('resources/js/app.js', 'web/js')
+    .sass('resources/sass/main.scss', 'web/css')
+    .copy('resources/img', 'web/img')
     .options({
         processCssUrls: false,
         postCss: [ tailwindcss('./tailwind.config.js') ],
     })
     .version()
-    .purgeCss({
-        globs: [
-            path.join(__dirname, 'resources/templates/**/*.twig'),
-            path.join(__dirname, 'resources/assets/js/**/*.vue')
-        ],
-        extensions: ['html', 'twig', 'js', 'php', 'vue'],
-        whitelistPatterns: [/cc-/],
-        whitelistPatternsChildren: [],
-    })
     .criticalCss({
         enabled: mix.inProduction(),
         paths: {

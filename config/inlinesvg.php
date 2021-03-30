@@ -6,6 +6,6 @@ return [
         '@webroot/img/svg',
     ],
 
-    'class' => 'fill-current w-6',
+    'class' => '',
 
 ];

@@ -4,73 +4,44 @@
  *
  * All of your system's general configuration settings go in here. You can see a
  * list of the available settings in vendor/craftcms/cms/src/config/GeneralConfig.php.
+ *
+ * @see \craft\config\GeneralConfig
  */
 
 use craft\helpers\App;
 
+$isDev = App::env('ENVIRONMENT') === 'dev';
+$isProd = App::env('ENVIRONMENT') === 'production';
+
 return [
-    // Global settings
-    '*' => [
-        // Allow updates?
-        'allowUpdates' => false,
+    // Default Week Start Day (0 = Sunday, 1 = Monday...)
+    'defaultWeekStartDay' => 1,
 
-        // Default Week Start Day (0 = Sunday, 1 = Monday...)
-        'defaultWeekStartDay' => 0,
+    // Whether generated URLs should omit "index.php"
+    'omitScriptNameInUrls' => true,
 
-        // Enable CSRF Protection (recommended, will be enabled by default in Craft 3)
-        'enableCsrfProtection' => true,
+    // The URI segment that tells Craft to load the control panel
+    'cpTrigger' => App::env('CP_TRIGGER') ?: 'admin',
 
-        // Whether "index.php" should be visible in URLs
-        'omitScriptNameInUrls' => true,
+    // The secure key Craft will use for hashing and encrypting data
+    'securityKey' => App::env('SECURITY_KEY'),
 
-        // Error templates path
-        'errorTemplatePrefix' => "_errors/",
+    // Whether Dev Mode should be enabled (see https://craftcms.com/guides/what-dev-mode-does)
+    'devMode' => $isDev,
 
-        // Control panel trigger word
-        'cpTrigger' => 'cms',
+    // Whether administrative changes should be allowed
+    'allowAdminChanges' => $isDev,
 
-        // The secure key Craft will use for hashing and encrypting data
-        'securityKey' => App::env('SECURITY_KEY'),
+    // Whether crawlers should be allowed to index pages and following links
+    'disallowRobots' => !$isProd,
 
-        // Base site URL
-        'siteUrl' => App::env('SITE_URL'),
+    // Error templates path
+    'errorTemplatePrefix' => "_errors/",
 
-        // Default timezone
-        'timezone' => 'Europe/London',
+    // Default timezone
+    'timezone' => 'Europe/London',
 
-        // Whether to save the project config out to config/project.yaml
-        // (see https://docs.craftcms.com/v3/project-config.html)
-        'useProjectConfigFile' => false,
-        
-        // Whether an `X-Powered-By: Craft CMS` header should be sent, helping
-        // services like BuiltWith identify that the site is running on Craft.
-        'sendPoweredByHeader' => false,
-    ],
-
-    // Dev environment settings
-    'dev' => [
-        // Allow updates?
-        'allowUpdates' => true,
-
-        // Dev Mode (see https://craftcms.com/guides/what-dev-mode-does)
-        'devMode' => true,
-
-        // Prevent crawlers from indexing pages and following links
-        'disallowRobots' => true,        
-    ],
-
-    // Staging environment settings
-    'staging' => [
-        // Set this to `false` to prevent administrative changes from being made on staging
-        'allowAdminChanges' => false,
-
-        // Prevent crawlers from indexing pages and following links
-        'disallowRobots' => true,        
-    ],
-
-    // Production environment settings
-    'production' => [
-        // Set this to `false` to prevent administrative changes from being made on production
-        'allowAdminChanges' => false,
-    ],
+    // Whether an `X-Powered-By: Craft CMS` header should be sent, helping
+    // services like BuiltWith identify that the site is running on Craft.
+    'sendPoweredByHeader' => false,    
 ];
