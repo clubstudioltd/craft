@@ -1,4 +1,4 @@
-<img src="./resources/assets/img/svg/logo.svg" width="64">
+<img src="./resources/img/svg/logo.svg" width="64">
 
 # Craft 3 Boilerplate
 
