@@ -3,25 +3,11 @@
  * Craft web bootstrap file
  */
 
-// Set path constants
-define('CRAFT_BASE_PATH', dirname(__DIR__));
-define('CRAFT_VENDOR_PATH', CRAFT_BASE_PATH.'/vendor');
+// Load shared bootstrap
+require __DIR__ . '/bootstrap.php';
+
 define('CRAFT_TEMPLATES_PATH', CRAFT_BASE_PATH.'/resources/templates');
 define('CRAFT_TRANSLATIONS_PATH', CRAFT_BASE_PATH.'/resources/translations');
-define('CRAFT_CONTENT_MIGRATIONS_PATH', CRAFT_BASE_PATH.'/database/migrations');
-
-// Load Composer's autoloader
-require_once CRAFT_VENDOR_PATH . '/autoload.php';
-
-// Load dotenv?
-if (class_exists('Dotenv\Dotenv') && file_exists(CRAFT_BASE_PATH . '/.env')) {
-    Dotenv\Dotenv::create(CRAFT_BASE_PATH)->load();
-}
-
-// Define additional PHP constants
-// (see https://craftcms.com/docs/3.x/config/#php-constants)
-define('CRAFT_ENVIRONMENT', getenv('ENVIRONMENT') ?: 'production');
-// ...
 
 // Load and run Craft
 /** @var craft\web\Application $app */
