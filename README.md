@@ -2,7 +2,7 @@
 
 # Craft 3 Boilerplate
 
-A scaffolding package to help you hit the ground running with your next [Craft CMS](https://craftcms.com) project. 
+A scaffolding package to help you hit the ground running with your next [Craft CMS](https://craftcms.com) project.
 
 ## What's included?
 
@@ -13,7 +13,6 @@ A scaffolding package to help you hit the ground running with your next [Craft C
 * Commonly used Craft CMS plugins:
   * [Asset Rev](https://github.com/clubstudioltd/craft-asset-rev)
   * [Imager](https://github.com/aelvan/Imager-Craft)
-  * [Inline SVG](https://github.com/clubstudioltd/craft-inline-svg)
   * [Minify](https://github.com/nystudio107/craft-minify)
   * [Redactor](https://github.com/craftcms/redactor)
   * [Sentry](https://github.com/lukeyouell/craft-sentry)
@@ -24,7 +23,7 @@ A scaffolding package to help you hit the ground running with your next [Craft C
 Once you're happy that your server/machine meets Craft's [requirements](https://docs.craftcms.com/v3/requirements.html), you can start your new project by running the following command in your terminal:
 
 ```
-composer create-project clubstudioltd/craft PATH 
+composer create-project clubstudioltd/craft PATH
 ```
 
 This will clone a copy of this repo to your machine and automatically install any Composer dependencies.
