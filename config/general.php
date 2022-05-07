@@ -10,8 +10,8 @@
 
 use craft\helpers\App;
 
-$isDev = App::env('ENVIRONMENT') === 'dev';
-$isProd = App::env('ENVIRONMENT') === 'production';
+$isDev = App::env('CRAFT_ENVIRONMENT') === 'dev';
+$isProd = App::env('CRAFT_ENVIRONMENT') === 'production';
 
 return [
     // Default Week Start Day (0 = Sunday, 1 = Monday...)
@@ -21,10 +21,7 @@ return [
     'omitScriptNameInUrls' => true,
 
     // The URI segment that tells Craft to load the control panel
-    'cpTrigger' => App::env('CP_TRIGGER') ?: 'admin',
-
-    // The secure key Craft will use for hashing and encrypting data
-    'securityKey' => App::env('SECURITY_KEY'),
+    'cpTrigger' => App::env('CRAFT_CP_TRIGGER') ?: 'admin',
 
     // Whether Dev Mode should be enabled (see https://craftcms.com/guides/what-dev-mode-does)
     'devMode' => $isDev,
@@ -43,5 +40,5 @@ return [
 
     // Whether an `X-Powered-By: Craft CMS` header should be sent, helping
     // services like BuiltWith identify that the site is running on Craft.
-    'sendPoweredByHeader' => false,    
+    'sendPoweredByHeader' => false,
 ];

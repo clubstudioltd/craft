@@ -4,7 +4,7 @@
  */
 
 // Load shared bootstrap
-require __DIR__ . '/bootstrap.php';
+require dirname(__DIR__) . '/bootstrap.php';
 
 define('CRAFT_TEMPLATES_PATH', CRAFT_BASE_PATH.'/resources/templates');
 define('CRAFT_TRANSLATIONS_PATH', CRAFT_BASE_PATH.'/resources/translations');
