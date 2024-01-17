@@ -1,4 +1,4 @@
-dateModified: 1705501820
+dateModified: 1705503345
 email:
   fromEmail: dev@clubstudio.co.uk
   fromName: 'Craft 4'
@@ -6,6 +6,7 @@ email:
 meta:
   __names__:
     3fc177c0-dac8-484c-818b-e0af6634e160: Tags # Tags
+    8a0ecff0-149e-4a15-88b3-8daf53245ddd: SEO # SEO
     9f6623bb-4e62-449e-acff-8e35e2514e8e: Common # Common
     23ba3f3d-e00f-45bf-9e52-d083a809ef5c: Tag # Tag
     82320fdb-38ab-4a6c-a76f-c4dca78f4a84: 'Craft 4' # Craft 4
