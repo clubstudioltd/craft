@@ -1,0 +1,67 @@
+{# --- Usage ---
+    {% include '_includes/atoms/image' with {
+        asset: entry.asset.one(),
+        transform: { width: 400, height: 300 },
+        srcset: [400, 500, 600],
+        sizes: {
+            default: '100vw',
+            lg: '50vw',
+            '100px': '30vw',
+        },
+        lazy: true,
+        class: 'w-full h-full',
+        attributes: {
+            id: 'image',
+        }
+    } only %}
+#}
+
+{% set data = {
+    asset: null,
+    transform: {},
+    srcset: [],
+    sizes: {},
+    lazy: true,
+    class: '',
+    attributes: {}
+}|merge(_context) %}
+
+{# Breakpoint mapping for sizes attribute #}
+{% set breakpoints = {
+    'sm': '640px',
+    'md': '768px',
+    'lg': '1024px',
+    'xl': '1280px',
+    '2xl': '1536px'
+} %}
+
+{# Generate sizes #}
+{% set sizes = [] %}
+{% for size in data.srcset %}
+    {% for scale in [1, 2, 3] %}
+        {% set sizes = sizes|merge([size * scale]) %}
+    {% endfor %}
+{% endfor %}
+
+{# Apply the transform to the asset #}
+{% do data.asset.setTransform(data.transform) %}
+
+<img
+    {% if data.srcset is not empty %}
+        srcset="{{ data.asset.srcset(sizes|sort) }}"
+        sizes="
+            {%- for breakpoint, size in data.sizes|filter((size, breakpoint) => breakpoint != 'default')|reverse -%}
+                {{- '(min-width: ' ~ breakpoints[breakpoint]|default(breakpoint) ~ ') ' ~ size ~ ', '-}}
+            {%- endfor -%}
+            {{- data.sizes.default ?? '100vw' -}}
+        "
+    {% endif %}
+    {{ attr({
+        src: data.asset.url,
+        width: data.asset.width,
+        height: data.asset.height,
+        alt: data.asset.alt ?? data.asset.title,
+        class: data.class,
+    }|merge(data.attributes)) }}
+    {% if data.lazy %} loading="lazy" {% endif %}
+/>

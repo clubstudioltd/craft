@@ -1,0 +1,9 @@
+{% extends '_layouts/base' %}
+
+{% block body %}
+    <div id="main-content">
+        {% include '_includes/organisms/header' %}
+        {% block content '' %}
+        {% include '_includes/organisms/footer' %}
+    </div>
+{% endblock %}

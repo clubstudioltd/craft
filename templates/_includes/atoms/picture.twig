@@ -1,0 +1,65 @@
+{# Usage:
+    {% include '_includes/atoms/picture' with {
+        asset: data.image,
+        transform: { width: 400, height: 300 },
+        sources: [
+            {
+                breakpoint: '1280px',
+                transform: { width: 320, height: 90 },
+                srcset: [160, 320],
+                sizes: {
+                    default: '160px',
+                    '1300px': '320px',
+                },
+            },
+        ]
+    } only %}
+#}
+
+{% set data = {
+    asset: null,
+    lazy: true,
+    sources: [],
+    attributes: {},
+    class: null,
+    imageClass: null,
+}|merge(_context) %}
+
+<picture>
+    {% for source in sources %}
+        {% set sourceAsset = source.asset ?? data.asset %}
+
+        {% do sourceAsset.setTransform(source.transform) %}
+
+        {% set sizes = [] %}
+        {% for size in source.srcset %}
+            {% for scale in [1, 2, 3] %}
+                {% set sizes = sizes|merge([size * scale]) %}
+            {% endfor %}
+        {% endfor %}
+
+        <source
+            srcset="{{ sourceAsset.srcset(sizes|sort) }}"
+            {% if source.sizes is not empty %}
+                sizes="
+                    {%- for breakpoint, size in source.sizes|filter((size, breakpoint) => breakpoint != 'default')|reverse -%}
+                        {{- '(min-width: ' ~ breakpoints[breakpoint]|default(breakpoint) ~ ') ' ~ size ~ ', '-}}
+                    {%- endfor -%}
+                    {{- data.sizes.default ?? '100vw' -}}
+                "
+            {% endif %}
+            {{ attr({
+                media: '(min-width: ' ~ source.breakpoint ~ ')',
+                width: source.transform.width ?? null,
+                height: source.transform.height ?? null,
+            }) }}
+        >
+    {% endfor %}
+    {% include '_includes/atoms/image' with {
+        asset: data.asset,
+        transform: data.transform,
+        lazy: data.lazy,
+        attributes: data.attributes,
+        class: data.imageClass,
+    } only %}
+</picture>

@@ -1,0 +1,24 @@
+fieldLayouts:
+  dad06771-a152-40f8-9834-ed61935c96c9:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 3fc177c0-dac8-484c-818b-e0af6634e160 # Tags
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5bcee85c-951f-4b01-84ba-e8f94667c5d0
+            userCondition: null
+            warning: null
+            width: 100
+        name: Scripts
+        uid: f0748791-1405-4b90-ad07-7644b85d1a06
+        userCondition: null
+handle: meta
+name: Meta
+sortOrder: 1

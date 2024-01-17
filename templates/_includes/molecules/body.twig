@@ -1,0 +1,14 @@
+{% set data = {
+    body: '',
+    size: 'base',
+}|merge(_context) %}
+
+{% set sizes = {
+    sm: 'prose-sm',
+    base: 'prose-base',
+    lg: 'prose-lg',
+} %}
+
+<div class="prose {{ sizes[data.size] }}">
+    {{ data.body|raw }}
+</div>

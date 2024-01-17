@@ -5,7 +5,7 @@ require('laravel-mix-criticalcss');
 mix.setPublicPath('web/')
     .js('resources/js/app.js', 'web/js')
     .postCss('resources/css/main.css', 'web/css', [
-        require("tailwindcss"),
+        require('tailwindcss'),
     ])
     .copy('resources/img', 'web/img')
     .version()

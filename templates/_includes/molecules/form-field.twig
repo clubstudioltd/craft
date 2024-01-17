@@ -1,0 +1,35 @@
+{% set data = {
+    type: 'text',
+    id: null,
+    required: false,
+    label: null,
+    input: {
+        name: null,
+        value: null,
+        attributes: {}
+    },
+    error: null,
+}|merge(_context, true) %}
+
+{% set required = data.input.attributes.required ?? false %}
+
+{% if type in ['text', 'email', 'tel'] %}
+    <div>
+        <div>
+            {% include '_includes/atoms/input-label' with {
+                for: data.id,
+                label: data.label,
+                showAsterisk: required,
+            } %}
+        </div>
+        {% include '_includes/atoms/input' with {
+            type: data.type,
+            id: data.id,
+            required: required,
+            additionalClasses: data.error ? ['border-red-400'] : [],
+        }|merge(data.input) only %}
+        {% if data.error %}
+            <div class="mt-1 text-red-500 text-xs">{{ data.error }}</div>
+        {% endif %}
+    </div>
+{% endif %}
