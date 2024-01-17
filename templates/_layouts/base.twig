@@ -14,6 +14,9 @@
                 {% block criticalCss '' %}
             </style>
         {% endif %}
+
+        <style>[x-cloak] { display: none; }</style>
+
         <link rel="{{ useCriticalCss ? 'preload' : 'stylesheet' }}" href="{{ rev('/css/main.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="{{ rev('/css/main.css') }}"></noscript>
     </head>
