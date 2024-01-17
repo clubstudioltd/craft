@@ -1,0 +1,44 @@
+dateModified: 1705096845
+email:
+  fromEmail: dev@clubstudio.co.uk
+  fromName: 'Craft 4'
+  transportType: craft\mail\transportadapters\Sendmail
+meta:
+  __names__:
+    9f6623bb-4e62-449e-acff-8e35e2514e8e: Common # Common
+    82320fdb-38ab-4a6c-a76f-c4dca78f4a84: 'Craft 4' # Craft 4
+    f6c58293-538a-4bf4-bdca-79fb6ffdd5a1: 'Craft 4' # Craft 4
+plugins:
+  assetrev:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  minify:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+  sentry-sdk:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  seomatic:
+    edition: standard
+    enabled: true
+    licenseKey: TXR6M3WVT5NG33QQK0JEUYDQ
+    schemaVersion: 3.0.12
+system:
+  edition: solo
+  live: true
+  name: 'Craft 4'
+  schemaVersion: 4.5.3.0
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true

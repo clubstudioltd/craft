@@ -1,9 +1,11 @@
 module.exports = {
   content: [
-    './resources/templates/**/*.twig',
+    './templates/**/*.twig',
   ],
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }

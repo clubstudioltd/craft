@@ -1,0 +1,17 @@
+{% set data = {
+    label: '',
+    for: '',
+    showAsterisk: false,
+    classes: ['text-sm'],
+    additionalClasses: []
+}|merge(_context) %}
+
+<label
+    for="{{ data.for }}"
+    class="{{ data.classes|merge(data.additionalClasses)|join(' ') }}"
+>
+    {{ data.label }}
+    {%- if data.showAsterisk -%}
+        <sup class="text-red-500">*</sup>
+    {%- endif -%}
+</label>

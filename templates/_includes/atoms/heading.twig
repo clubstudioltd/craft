@@ -1,0 +1,23 @@
+{% set data = {
+    level: 2,
+    heading: '',
+    attributes: {},
+}|merge(_context) %}
+
+{% set element = 'h' ~ data.level %}
+{% set classMap = {
+    1: 'text-6xl',
+    2: 'text-5xl',
+    3: 'text-4xl',
+    4: 'text-3xl',
+    5: 'text-2xl',
+    6: 'text-xl',
+} %}
+
+{% set heading %}
+    <{{ element }} class="{{ classMap[data.level] }}">
+        {{ data.heading }}
+    </{{ element }}>
+{% endset %}
+
+{{ heading|attr(data.attributes) }}

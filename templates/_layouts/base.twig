@@ -16,20 +16,18 @@
         {% endif %}
         <link rel="{{ useCriticalCss ? 'preload' : 'stylesheet' }}" href="{{ rev('/css/main.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="{{ rev('/css/main.css') }}"></noscript>
-        <script>
-            {{ source('_includes/loadcss') }}
-            {{ source('_includes/loadjs') }}
-        </script>
     </head>
-    <body class="body bg-gray-200">
+    <body class="body">
         <noscript>This website works best when you have JavaScript enabled.</noscript>
+
+        {% if craft.app.config.general.devMode %}
+            {% include '_includes/dev/breakpoint-helper' %}
+        {% endif %}
 
         {% block body '' %}
 
         {% block beforeScripts '' %}
-        <script>
-            loadjs(['{{ rev('/js/app.js') }}']);
-        </script>
+        <script src="{{ rev('/js/app.js') }}" defer></script>
         {% block afterScripts '' %}
     </body>
 </html>

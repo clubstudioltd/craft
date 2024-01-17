@@ -1,6 +1,6 @@
 <img src="./resources/svg/logo.svg" width="64">
 
-# Craft 3 Boilerplate
+# Craft 4 Boilerplate
 
 A scaffolding package to help you hit the ground running with your next [Craft CMS](https://craftcms.com) project.
 
