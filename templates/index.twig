@@ -5,23 +5,25 @@
 {% endblock %}
 
 {% block content %}
-    <div class="leading-normal flex justify-center items-center text-center p-6">
-        <div class="max-w-sm">
-            <div class="bg-white shadow-lg rounded-lg py-8 px-6">
-                {{ svg('@svg/logo.svg')|attr({ class: 'w-16 mx-auto' }) }}
-                {% include '_includes/molecules/body' with {
-                    body: '<p>You have successfully started a new Craft CMS project!</p>'|t,
-                    attributes: {
-                        class: 'my-6 text-gray-700',
-                    }
-                } %}
-                {% include '_includes/atoms/button' with {
-                    url: siteUrl(getenv('CRAFT_CP_TRIGGER')),
-                    text: 'Log in to the CMS'|t,
-                    attributes: {
-                        'hx-boost': 'false',
-                    }
-                } only %}
+    <div class="leading-normal flex justify-center items-center text-center flex-1">
+        <div class="container mx-auto px-8 h-full">
+            <div class="bg-white shadow-sm rounded-lg py-8 px-6 h-full flex items-center justify-center">
+                <div>
+                    {{ svg('@svg/logo.svg')|attr({ class: 'w-16 mx-auto' }) }}
+                    {% include '_includes/molecules/body' with {
+                        body: '<p>You have successfully started a new Craft CMS project!</p>'|t,
+                        attributes: {
+                            class: 'my-6 text-gray-700',
+                        }
+                    } %}
+                    {% include '_includes/atoms/button' with {
+                        url: siteUrl(getenv('CRAFT_CP_TRIGGER')),
+                        text: 'Log in to the CMS'|t,
+                        attributes: {
+                            'hx-boost': 'false',
+                        }
+                    } only %}
+                </div>
             </div>
         </div>
     </div>
