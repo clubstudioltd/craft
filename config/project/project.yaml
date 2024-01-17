@@ -1,4 +1,4 @@
-dateModified: 1705503924
+dateModified: 1705504210
 email:
   fromEmail: dev@clubstudio.co.uk
   fromName: 'Craft 4'
@@ -67,6 +67,6 @@ system:
 users:
   allowPublicRegistration: false
   defaultGroup: null
-  photoSubpath: null
-  photoVolumeUid: null
+  photoSubpath: user-photos
+  photoVolumeUid: 7ef904c6-2a80-4657-9128-80113a7040bc # Images
   requireEmailVerification: true
