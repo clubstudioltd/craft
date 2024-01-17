@@ -7,7 +7,6 @@
     "globals": {
     },
     "extends": [
-        "plugin:vue/essential"
     ],
     "rules": {
         "quotes": ["error", "single"]
