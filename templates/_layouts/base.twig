@@ -23,15 +23,11 @@
         <link rel="{{ useCriticalCss ? 'preload' : 'stylesheet' }}" href="{{ rev('/css/main.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="{{ rev('/css/main.css') }}"></noscript>
 
-        <script type="module">
-            import hotwiredTurbo from 'https://cdn.skypack.dev/@hotwired/turbo';
-        </script>
-
         {% for tag in scripts|filter(tag => tag.position == 'head') %}
           {{ tag.tag|raw }}
         {% endfor %}
     </head>
-    <body class="body">
+    <body hx-boost="true" class="body">
         <noscript>This website works best when you have JavaScript enabled.</noscript>
 
         {% include '_includes/molecules/skip-link' %}
@@ -43,6 +39,7 @@
         {% block body '' %}
 
         {% block beforeScripts '' %}
+        <script src="https://unpkg.com/htmx.org@1.9.10" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script>
         <script src="{{ rev('/js/app.js') }}" defer></script>
         {% block afterScripts '' %}
 
