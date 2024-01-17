@@ -19,6 +19,10 @@
 
         <link rel="{{ useCriticalCss ? 'preload' : 'stylesheet' }}" href="{{ rev('/css/main.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="{{ rev('/css/main.css') }}"></noscript>
+
+        <script type="module">
+            import hotwiredTurbo from 'https://cdn.skypack.dev/@hotwired/turbo';
+        </script>
     </head>
     <body class="body">
         <noscript>This website works best when you have JavaScript enabled.</noscript>
