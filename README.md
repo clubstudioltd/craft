@@ -12,10 +12,8 @@ A scaffolding package to help you hit the ground running with your next [Craft C
 * A sensible directory structure
 * Commonly used Craft CMS plugins:
   * [Asset Rev](https://github.com/clubstudioltd/craft-asset-rev)
-  * [Imager](https://github.com/aelvan/Imager-Craft)
-  * [Minify](https://github.com/nystudio107/craft-minify)
   * [Redactor](https://github.com/craftcms/redactor)
-  * [Sentry](https://github.com/lukeyouell/craft-sentry)
+  * [Sentry](https://github.com/born05/craft-sentry/)
   * [SEOmatic](https://github.com/nystudio107/craft-seomatic)
 
 ## Getting Started
