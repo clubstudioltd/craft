@@ -33,7 +33,6 @@
       "modules\\": "modules/"
     }
   },
-  "minimum-stability": "dev",
   "config": {
     "allow-plugins": {
       "craftcms/plugin-installer": true,
