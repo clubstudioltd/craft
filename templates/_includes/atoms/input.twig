@@ -8,14 +8,10 @@
     attributes: [],
 }|merge(_context, true) %}
 
-{% set input %}
-    <input
-        id="{{ data.id }}"
-        type="{{ data.type }}"
-        name="{{ data.name }}"
-        value="{{ data.value }}"
-        class="{{ data.classes|merge(data.additionalClasses)|join(' ') }}"
-    />
-{% endset %}
-
-{{ input|attr(data.attributes) }}
+{% tag 'input' with {
+    id: data.id,
+    type: data.type,
+    name: data.name,
+    value: data.value,
+    class: data.classes|merge(data.additionalClasses)|join(' ')
+}|merge(data.attributes) %}
