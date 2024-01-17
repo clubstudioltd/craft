@@ -1,5 +1,5 @@
 {%- set useCriticalCss = (block('criticalCss')|length and not craft.app.config.general.devMode) ? true : false -%}
-{%- set tags = meta.scripts.all() -%}
+{%- set scripts = meta.scripts.all() -%}
 
 <!doctype html>
 <html lang="{{ craft.app.language|slice(0, 2) }}">
@@ -27,7 +27,7 @@
             import hotwiredTurbo from 'https://cdn.skypack.dev/@hotwired/turbo';
         </script>
 
-        {% for tag in tags|filter(tag => tag.position == 'head') %}
+        {% for tag in scripts|filter(tag => tag.position == 'head') %}
           {{ tag.tag|raw }}
         {% endfor %}
     </head>
@@ -46,7 +46,7 @@
         <script src="{{ rev('/js/app.js') }}" defer></script>
         {% block afterScripts '' %}
 
-        {% for tag in tags|filter(tag => tag.position == 'bodyEnd') %}
+        {% for tag in scripts|filter(tag => tag.position == 'bodyEnd') %}
           {{ tag.tag|raw }}
         {% endfor %}
     </body>
