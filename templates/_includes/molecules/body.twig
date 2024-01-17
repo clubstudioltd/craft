@@ -1,6 +1,7 @@
 {% set data = {
     body: '',
     size: 'base',
+    attributes: {}
 }|merge(_context) %}
 
 {% set sizes = {
@@ -9,6 +10,6 @@
     lg: 'prose-lg',
 } %}
 
-<div class="prose {{ sizes[data.size] }}">
+<div {{ attr(data.attributes) }} class="prose {{ sizes[data.size] }}">
     {{ data.body|raw }}
 </div>
