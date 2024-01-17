@@ -6,7 +6,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: 3fc177c0-dac8-484c-818b-e0af6634e160 # Tags
+            fieldUid: 3fc177c0-dac8-484c-818b-e0af6634e160 # Scripts
             instructions: null
             label: null
             required: false

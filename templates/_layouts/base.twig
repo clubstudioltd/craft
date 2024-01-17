@@ -1,5 +1,5 @@
 {%- set useCriticalCss = (block('criticalCss')|length and not craft.app.config.general.devMode) ? true : false -%}
-{%- set tags = meta.tags.all() -%}
+{%- set tags = meta.scripts.all() -%}
 
 <!doctype html>
 <html lang="{{ craft.app.language|slice(0, 2) }}">

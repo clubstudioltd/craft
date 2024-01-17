@@ -1,12 +1,12 @@
 columnSuffix: null
 contentColumnType: string
 fieldGroup: c18afe66-b83b-45ea-ab40-89602795ee45 # Meta
-handle: tags
+handle: scripts
 instructions: null
-name: Tags
+name: Scripts
 searchable: false
 settings:
-  contentTable: '{{%matrixcontent_tags}}'
+  contentTable: '{{%matrixcontent_scripts}}'
   maxBlocks: null
   minBlocks: null
   propagationKeyFormat: null

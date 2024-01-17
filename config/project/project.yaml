@@ -1,4 +1,4 @@
-dateModified: 1705504210
+dateModified: 1705504253
 email:
   fromEmail: dev@clubstudio.co.uk
   fromName: 'Craft 4'
@@ -28,7 +28,7 @@ fs:
     url: '@web/assets/images'
 meta:
   __names__:
-    3fc177c0-dac8-484c-818b-e0af6634e160: Tags # Tags
+    3fc177c0-dac8-484c-818b-e0af6634e160: Scripts # Scripts
     7ef904c6-2a80-4657-9128-80113a7040bc: Images # Images
     8a0ecff0-149e-4a15-88b3-8daf53245ddd: SEO # SEO
     9f6623bb-4e62-449e-acff-8e35e2514e8e: Common # Common
