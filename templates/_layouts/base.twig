@@ -1,4 +1,5 @@
 {%- set useCriticalCss = (block('criticalCss')|length and not craft.app.config.general.devMode) ? true : false -%}
+{%- set tags = meta.tags.all() -%}
 
 <!doctype html>
 <html lang="{{ craft.app.language|slice(0, 2) }}">
@@ -8,7 +9,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="csrf-token" content="{{ craft.app.request.csrfToken }}">
         <link rel="home" href="{{ url('') }}">
+
         {% include '_includes/meta/icons' %}
+
         {% if useCriticalCss %}
             <style>
                 {% block criticalCss '' %}
@@ -23,6 +26,10 @@
         <script type="module">
             import hotwiredTurbo from 'https://cdn.skypack.dev/@hotwired/turbo';
         </script>
+
+        {% for tag in tags|filter(tag => tag.position == 'head') %}
+          {{ tag.tag|raw }}
+        {% endfor %}
     </head>
     <body class="body">
         <noscript>This website works best when you have JavaScript enabled.</noscript>
@@ -38,5 +45,9 @@
         {% block beforeScripts '' %}
         <script src="{{ rev('/js/app.js') }}" defer></script>
         {% block afterScripts '' %}
+
+        {% for tag in tags|filter(tag => tag.position == 'bodyEnd') %}
+          {{ tag.tag|raw }}
+        {% endfor %}
     </body>
 </html>
