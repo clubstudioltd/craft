@@ -23,6 +23,8 @@
     <body class="body">
         <noscript>This website works best when you have JavaScript enabled.</noscript>
 
+        {% include '_includes/molecules/skip-link' %}
+
         {% if craft.app.config.general.devMode %}
             {% include '_includes/dev/breakpoint-helper' %}
         {% endif %}
