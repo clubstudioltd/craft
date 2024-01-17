@@ -1,15 +1,32 @@
-dateModified: 1705503345
+dateModified: 1705503690
 email:
   fromEmail: dev@clubstudio.co.uk
   fromName: 'Craft 4'
   transportType: craft\mail\transportadapters\Sendmail
+fs:
+  files:
+    hasUrls: true
+    name: Files
+    settings:
+      path: '@webroot/assets/files'
+    type: craft\fs\Local
+    url: '@web/assets/files'
+  images:
+    hasUrls: true
+    name: Images
+    settings:
+      path: '@webroot/assets/images'
+    type: craft\fs\Local
+    url: '@web/assets/images'
 meta:
   __names__:
     3fc177c0-dac8-484c-818b-e0af6634e160: Tags # Tags
+    7ef904c6-2a80-4657-9128-80113a7040bc: Images # Images
     8a0ecff0-149e-4a15-88b3-8daf53245ddd: SEO # SEO
     9f6623bb-4e62-449e-acff-8e35e2514e8e: Common # Common
     23ba3f3d-e00f-45bf-9e52-d083a809ef5c: Tag # Tag
     82320fdb-38ab-4a6c-a76f-c4dca78f4a84: 'Craft 4' # Craft 4
+    6107005d-bc7b-4df0-8970-e1aa0e4a070a: Files # Files
     b5b64794-79b0-4f45-bafa-da0addf4f5c4: Tag # Tag
     be72e181-220b-41b3-bd17-764bdd4c4a79: Position # Position
     c18afe66-b83b-45ea-ab40-89602795ee45: Meta # Meta
