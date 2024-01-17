@@ -1,8 +1,16 @@
-dateModified: 1705503690
+dateModified: 1705503924
 email:
   fromEmail: dev@clubstudio.co.uk
   fromName: 'Craft 4'
-  transportType: craft\mail\transportadapters\Sendmail
+  replyToEmail: null
+  template: null
+  transportSettings:
+    host: $SMTP_HOSTNAME
+    password: $SMTP_PASSWORD
+    port: $SMTP_PORT
+    useAuthentication: $SMTP_AUTHENTICATION
+    username: $SMTP_USERNAME
+  transportType: craft\mail\transportadapters\Smtp
 fs:
   files:
     hasUrls: true
